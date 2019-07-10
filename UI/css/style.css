@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 body{
 	 font-family: Arial, Helvetica, serif;
 	 font-size: 15px;
@@ -275,4 +276,17 @@ footer{
      margin-bottom: 10px;
      margin-right: auto;
      margin-left: auto;
+}
+.fine-input{
+     padding: 10px;
+     border: 1px solid grey;
+     width: 200px;
+     border-radius:4px; 
+    
+    
+}
+.fine{
+     padding: 10px;
+    
+
 }
