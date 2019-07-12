@@ -46,6 +46,30 @@ class UserController {
     }
   }
 
+static signin(req, res) {
+        const isUserExist = users.find(user => user.email === req.body.email && user.password === req.body.password);
+        if (!isUserExist) {
+            return res.status(400).send({
+               status: 400, 
+               error: "invalid user account",
+               })
+        }
+     
+        const token = jwt.sign({ email: isUserExist.email }, process.env.secretkey);
+        if (isUserExist) {
+            res.status(200).send({
+                status: 200,
+                token: token,
+                data: isUserExist
+            });
+        }
+        else {
+            res.status(400).send({
+                status: 400,
+                message: "Invalid credentials"
+            })
+        }
+      }
 
 
 }
