@@ -1,0 +1,11 @@
+language:
+  node_js
+
+  node_js:
+  - "stable"
+
+script:
+    npm run test
+
+after script:
+  npm install coveralls | npm run coverage
