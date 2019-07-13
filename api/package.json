@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node index.js",
-    "test": ""
+    "test": "nyc --export=text mocha --require @babel/register test/*.js --exit"
   },
   "author": "",
   "license": "ISC",
